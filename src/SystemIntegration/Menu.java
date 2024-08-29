@@ -10,6 +10,7 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
 
         while(isRunning) {
+            System.out.println(" ");
             System.out.println("--- WELCOME TO THE WEBSHOP ---");
             System.out.println("1. Choose a query for the database");
             System.out.println("2. Exit");
@@ -56,7 +57,6 @@ public class Menu {
                 break;
             case 5:
                 System.out.println("Returning...");
-                System.out.println(" ");
                 break;
             default:
                 System.out.println("INVALID ENTRY. TRY AGAIN.");
