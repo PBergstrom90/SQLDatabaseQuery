@@ -1,10 +1,12 @@
 package SystemIntegration;
 
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Menu {
 
-    public void runMenu() {
+    public void runMenu() throws SQLException, IOException {
 
         boolean isRunning = true;
         Scanner scanner = new Scanner(System.in);
@@ -31,7 +33,7 @@ public class Menu {
         }
     }
 
-    public void queryMenu() {
+    public void queryMenu() throws SQLException, IOException {
         Scanner scanner = new Scanner(System.in);
         Queries queries = new Queries();
         System.out.println("--- QUERY MENU ---");

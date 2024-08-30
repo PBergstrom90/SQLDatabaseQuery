@@ -1,6 +1,12 @@
-drop database if exists webshop_handin;
-create database webshop_handin;
-use webshop_handin;
+drop database if exists webshop;
+create database webshop;
+use webshop;
+
+DROP USER 'webshopuser'@'localhost';
+
+CREATE USER 'webshopuser'@'localhost' IDENTIFIED BY 'secretpassword07!';
+grant all privileges on *.* TO 'webshopuser'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
 
 -- DATA TABLES
 

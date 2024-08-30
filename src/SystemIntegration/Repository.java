@@ -25,6 +25,7 @@ public class Repository {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String address = rs.getString("address");
+                System.out.println(id + " " + name + " " + address);
             }
         }
     }
