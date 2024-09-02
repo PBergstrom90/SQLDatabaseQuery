@@ -32,6 +32,7 @@ public class Repository {
                         p.getProperty("password"));
                 PreparedStatement stmt = con.prepareStatement(sqlQuery)) {
             ResultSet rs = stmt.executeQuery();
+
             // Printout - Header
             System.out.println(" ");
             System.out.printf("%-30s %-10s%n", "Customer", "Amount");
@@ -58,6 +59,7 @@ public class Repository {
                 p.getProperty("password"));
              PreparedStatement stmt = con.prepareStatement(sqlQuery)) {
             ResultSet rs = stmt.executeQuery();
+
             // Printout - Header
             System.out.println(" ");
             System.out.printf("%-30s %-10s%n", "Category", "Number of Products");
@@ -86,6 +88,7 @@ public class Repository {
                 p.getProperty("password"));
              PreparedStatement stmt = con.prepareStatement(sqlQuery)) {
             ResultSet rs = stmt.executeQuery();
+
             // Printout - Header
             System.out.println(" ");
             System.out.printf("%-30s %-10s%n", "Customer", "Total Spent");
@@ -112,6 +115,7 @@ public class Repository {
                 p.getProperty("password"));
              PreparedStatement stmt = con.prepareStatement(sqlQuery)) {
             ResultSet rs = stmt.executeQuery();
+
             // Printout - Header
             System.out.println(" ");
             System.out.printf("%-30s %-10s%n", "Product", "Total Sold");
