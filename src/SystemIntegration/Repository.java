@@ -24,7 +24,7 @@ public class Repository {
                 "inner join booking on places.bookingId = booking.id " +
                 "inner join adding on booking.id = adding.bookingId " +
                 "inner join product on adding.productId = product.id " +
-                "where product.name = 'Sweatpants' and product.color = 'black' and product.size = '38' " +
+                "where product.name = 'Sweetpants' and product.color = 'black' and product.size = '38' " +
                 "group by customer.name order by Amount desc;";
         try (Connection con = DriverManager.getConnection(
                         p.getProperty("connectionString"),

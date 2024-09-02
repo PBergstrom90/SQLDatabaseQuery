@@ -50,7 +50,7 @@ public class Menu {
         try {
             System.out.println(" ");
             System.out.println("--- QUERY MENU ---");
-            System.out.println("1. SHOW: customers that have bought black Sweatpants in size 38");
+            System.out.println("1. SHOW: customers that have bought black Sweetpants in size 38");
             System.out.println("2. SHOW: amount of products per category");
             System.out.println("3. SHOW: all customers with total purchased value");
             System.out.println("4. SHOW: top 5 best selling products");

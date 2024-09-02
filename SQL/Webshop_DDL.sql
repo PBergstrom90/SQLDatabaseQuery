@@ -17,6 +17,9 @@ address varchar(30) not null,
 created timestamp default CURRENT_TIMESTAMP,
 lastUpdate timestamp default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP);
 
+-- An additional index for customer names.
+create index customerIndex on Customer(name);
+
 create table product
 (id int not null auto_increment primary key,
 name varchar(30) not null,
@@ -25,6 +28,9 @@ color varchar(30) not null,
 price int not null,
 created timestamp default CURRENT_TIMESTAMP,
 lastUpdate timestamp default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP);
+
+-- An additional index for product prices.
+create index priceIndex on Product(price);
 
 create table booking
 (id int not null auto_increment primary key,
@@ -89,7 +95,7 @@ INSERT INTO product (name, size, color, price) VALUES
 ('Dress','M','White',500),
 ('Socks','S','Black',150),
 ('Sweatshirt','M','Green',300),
-('Sweatpants','38','Black',250),
+('Sweetpants','38','Black',250),
 ('Tanktop','M','White',100),
 ('Shorts','L','Orange',250);
 
@@ -141,6 +147,3 @@ INSERT INTO adding (bookingId, productId, quantity) VALUES
 (7,6,2), -- Booking 7 includes 2 Sweatshirts
 (8,5,3), -- Booking 8 includes 3 pairs of Socks
 (8,7,1); -- Booking 8 includes 1 pair of Sweatpants
-
--- An additional index for customer names. 
-create index customerIndex on Customer(name);
