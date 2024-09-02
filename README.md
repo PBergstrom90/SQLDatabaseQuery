@@ -7,11 +7,6 @@ This project is a Java-based application designed to interact with a webshop dat
 * Connects to a MySQL database.
 * Provides a text-based menu for user interaction.
 * Allows querying the database for specific information.
-* Offers functionalities like:
-    * Find customers who bought black Sweatpants in size 38.
-    * List the amount of products per category.
-    * Show a customer list with their total spent amount.
-    * Display the top 5 best-selling products.
 
 ## Project Structure:
 
