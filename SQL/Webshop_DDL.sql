@@ -2,8 +2,8 @@ drop database if exists webshop;
 create database webshop;
 use webshop;
 
-DROP USER 'webshopuser'@'localhost';
-
+-- Setup user for the webshop
+drop user if exists 'webshopuser'@'localhost';
 CREATE USER 'webshopuser'@'localhost' IDENTIFIED BY 'secretpassword07!';
 grant all privileges on *.* TO 'webshopuser'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
@@ -141,3 +141,6 @@ INSERT INTO adding (bookingId, productId, quantity) VALUES
 (7,6,2), -- Booking 7 includes 2 Sweatshirts
 (8,5,3), -- Booking 8 includes 3 pairs of Socks
 (8,7,1); -- Booking 8 includes 1 pair of Sweatpants
+
+-- An additional index for customer names. 
+create index customerIndex on Customer(name);
