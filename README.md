@@ -2,28 +2,40 @@
 
 This project is a Java-based application designed to interact with a webshop database. The application provides a command-line interface for querying and displaying information related to customers, products, and sales.
 
-## Overview
+## Key Features:
 
-### Project Structure
+* Connects to a MySQL database.
+* Provides a text-based menu for user interaction.
+* Allows querying the database for specific information.
+* Offers functionalities like:
+    * Find customers who bought black Sweatpants in size 38.
+    * List the amount of products per category.
+    * Show a customer list with their total spent amount.
+    * Display the top 5 best-selling products.
 
-- **`src/`**: Contains Java source files.
-    - **`main.java`**: The main entry point of the application.
-    - **`Menu.java`**: Handles the menu-driven user interface.
-    - **`Repository.java`**: Manages database interactions.
-- **`settings.properties`**: Contains database connection configuration.
-- **`SQL/`**: SQL scripts for setting up the database.
-    - **`Webshop_DDL.sql`**: Script to create the database schema and initial data.
-    - **`Webshop_DML.sql`**: Contains queries for retrieving specific data.
-- **`resources/`**: Contains images and other resources.
-    - **`ER Diagram.png`**: ER Diagram overview of the database schema.
-    - **`Relational Diagram.pdf`**: Relational Diagram in Excel format.
+## Project Structure:
 
-## Resources
+* **src/SystemIntegration**: Contains the Java source code files.
+    * `Main.java`: The program entry point, starts the menu.
+    * `Menu.java`: Handles user interaction through the text-based menu.
+    * `Repository.java`: Connects to the database, executes queries, and retrieves data.
+* **settings.properties**: Stores database connection details (connection string, username, password).
+* **SQL/Webshop_DDL.sql**: Database schema definition script (tables, relationships).
+* **SQL/Webshop_DML.sql**: Contains pre-defined example queries used by the program.
+* **resources/ (optional)**: Folder for additional resources like an ER diagram image.
 
-#### ER Diagram:
+## How to Run:
+
+1. Ensure you have a MySQL database server running with the webshop schema created (refer to `SQL/Webshop_DDL.sql`).
+2. Update the `settings.properties` file with your specific database connection details.
+3. Compile and run the `Main.java` class.
+
+## Resources:
+
+### ER Diagram:
 ![Application Screenshot](resources/ER%20Diagram.png)
 
-#### Relational Diagram
+### Relational Diagram
 [Relational Diagram as PDF](resources/Relational%20Diagram.pdf)
 
 ### License
