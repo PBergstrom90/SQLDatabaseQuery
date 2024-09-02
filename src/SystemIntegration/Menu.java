@@ -15,9 +15,8 @@ public class Menu {
             try {
                 System.out.println(" ");
                 System.out.println("--- WELCOME TO THE WEBSHOP ---");
-                System.out.println("1. Choose a query for the database");
-                System.out.println("2. Show all customers in the database");
-                System.out.println("3. Exit");
+                System.out.println("1. CHOOSE: a query for the database");
+                System.out.println("2. EXIT.");
                 System.out.print("ENTER: ");
                 int option = scanner.nextInt();
                 switch (option) {
@@ -25,10 +24,6 @@ public class Menu {
                         queryMenu();
                         break;
                     case 2:
-                        Repository repository = new Repository();
-                        repository.connectToAndQueryCustomerDatabase();
-                        break;
-                    case 3:
                         isRunning = false;
                         System.out.println("System logging off...");
                         break;
@@ -55,11 +50,12 @@ public class Menu {
         try {
             System.out.println(" ");
             System.out.println("--- QUERY MENU ---");
-            System.out.println("1. Show customers that have bought black Sweatpants in size 38");
-            System.out.println("2. List amount of products per category");
-            System.out.println("3. Create a list customerlist with total purchased value");
-            System.out.println("4. Show Top 5 best selling products");
-            System.out.println("5. Return to main menu");
+            System.out.println("1. SHOW: customers that have bought black Sweatpants in size 38");
+            System.out.println("2. SHOW: amount of products per category");
+            System.out.println("3. SHOW: all customers with total purchased value");
+            System.out.println("4. SHOW: top 5 best selling products");
+            System.out.println("5. SHOW: all customers in the database");
+            System.out.println("6. RETURN: to main menu");
             System.out.print("ENTER: ");
             int option = scanner.nextInt();
             switch (option) {
@@ -76,7 +72,10 @@ public class Menu {
                     repository.showTop5BestSelling();
                     break;
                 case 5:
-                    System.out.println("Returning...");
+                    repository.connectToAndQueryCustomerDatabase();
+                    break;
+                case 6:
+                    System.out.println("Returning... ");
                     break;
                 default:
                     System.out.println("INVALID ENTRY. TRY AGAIN.");
