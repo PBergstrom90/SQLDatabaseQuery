@@ -27,6 +27,11 @@ This project is a Java-based application designed to interact with a webshop dat
 
 ## Resources:
 
+This database schema adheres to the Third Normal Form (3NF) standard. Each table in the schema is designed to ensure:
+
+* **No Partial Dependencies**: All non-key attributes are fully functionally dependent on the primary key.
+* **No Transitive Dependencies**: There are no transitive dependencies, meaning that non-key attributes do not depend on other non-key attributes, only on the primary key.
+
 ### ER Diagram:
 ![Application Screenshot](resources/ER%20Diagram.png)
 
